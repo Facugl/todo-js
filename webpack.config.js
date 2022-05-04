@@ -45,9 +45,10 @@ module.exports = {
                         }
                     }
                 ]
-            }
+            },
         ]
     },
+    stats: { children: false }, //to fix the error-Entrypoint undefined=index.html
     plugins: [
         new HtmlWebPackPlugin({
             template: './src/index.html',
@@ -56,7 +57,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].css',
             ignoreOrder: false
-        })
+        }),
     ]
 
 }
